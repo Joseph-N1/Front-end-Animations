@@ -43,10 +43,13 @@ body, html {
     background-color: white;
     transition: .4s;
     border-radius: 50%;
+    background: url('monsterbet.png') no-repeat center center; /* Add this line */
+    background-size: cover; /* Add this line */
 }
 
 .toggle-input:checked + .toggle-label {
-    background-color: #2196F3;
+    background-color: purple; /* Change the cylinder to purple when checked */
+    box-shadow: 0 0 10px 2px #d8bfd8; /* Add a light purple glow effect */
 }
 
 .toggle-input:checked + .toggle-label:before {
