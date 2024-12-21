@@ -1,0 +1,64 @@
+.Btn{
+    width: 30rem;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all .3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.svgContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gray;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    letter-spacing: 0.8px;
+    border-radius: 10px;
+    transition: all .3s;
+}
+
+.BG{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, orange, red);
+    z-index: -1;
+    border-radius: 9px;
+    pointer-events: none;
+    transition: all .3s;
+}
+
+.Btn:hover .BG {
+    transform: rotate(35deg);
+    transform-origin: bottom;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.Btn:hover .svgContainer{
+    background-color: gray;
+}
+
+.icon {
+    width: 30rem; /* Adjust size as needed */
+    height: auto;
+    display: block;
+    object-fit: contain; /* Ensures the image scales proportionally */
+}
+
+.Btn:hover .icon {
+    filter: brightness(1.2);
+    transform: scale(1.1); /* Slightly enlarge the logo on hover */
+    transition: all 0.3s ease;
+}
